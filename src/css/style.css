@@ -1,0 +1,26 @@
+#container {
+  width: 100%;
+  height: 100vh;
+}
+.button_main {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50vh;
+  width: 200px;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+}
+.popover_title {
+  background-color: rgba(87,217,31,0.77);
+}
+
+.popover_text {
+  background-color: rgba(170,222,174,0.91);
+}
+
+.popover {
+  width: 200px;
+  position: absolute;
+}
