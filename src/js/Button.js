@@ -13,6 +13,14 @@ export class Button {
     return '.popover';
   }
 
+  static get coordinates() {
+    const coord = document.querySelector('.button_main').getBoundingClientRect();
+    // eslint-disable-next-line max-len
+    const popCoords = document.querySelector('.popover').getBoundingClientRect();
+    const a = [coord.left, popCoords.left, coord.top, popCoords.bottom];
+    return a;
+  }
+
   bindToDOM() {
     this.parentEl.innerHTML = this.constructor.markup;
     document.querySelector(this.constructor.buttonSelector).addEventListener('click', () => {
@@ -27,6 +35,8 @@ export class Button {
         this.parentEl.append(popover);
       } else {
         document.querySelector(this.constructor.popoverSelector).remove();
+      }
+      if (document.querySelector('.popover') !== null) {
       }
     });
   }
